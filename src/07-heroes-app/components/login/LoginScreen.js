@@ -13,7 +13,9 @@ export const LoginScreen = ({ history }) => {
                 name: "Diego armando silva facio"
             }
         })
-        history.replace('/')
+        
+        const last_path = localStorage.getItem('last_path') || '/'
+        history.replace(last_path)
     }
     return (
         <div className="container mt-5">
